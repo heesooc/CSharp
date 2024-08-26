@@ -28,13 +28,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04MemberVar", "04MemberVar\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08FuncEx", "08FuncEx\08FuncEx.csproj", "{644CC34E-C48D-417A-9008-36C1CD4F1AF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09Operator", "09Operator\09Operator.csproj", "{CADE8B20-B25D-44AF-9974-4DFBC79C6EAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09Operator", "09Operator\09Operator.csproj", "{CADE8B20-B25D-44AF-9974-4DFBC79C6EAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10Memory00(Func)", "10Memory00_Func_\10Memory00(Func).csproj", "{400D49CE-C3CF-4DF5-95B5-EC3C70D2E6EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10Memory00(Func)", "10Memory00_Func_\10Memory00(Func).csproj", "{400D49CE-C3CF-4DF5-95B5-EC3C70D2E6EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11Memory01(Value)", "11Memory00(Value)\11Memory01(Value).csproj", "{41560666-448B-48AE-BAE6-E0234DC9CD31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11Memory01(Value)", "11Memory00(Value)\11Memory01(Value).csproj", "{41560666-448B-48AE-BAE6-E0234DC9CD31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12Memory02(Reference)", "12Memory02(Reference)\12Memory02(Reference).csproj", "{6A30F93C-5234-456F-A85C-E59451B24F70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12Memory02(Reference)", "12Memory02(Reference)\12Memory02(Reference).csproj", "{6A30F93C-5234-456F-A85C-E59451B24F70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13StaticVar", "13StaticVar\13StaticVar.csproj", "{12155EB3-E423-4D66-A789-E19CB0AC9111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14StaticFunc", "14StaticFunc\14StaticFunc.csproj", "{153F5F2F-7897-4CDD-B77D-BA358740C995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15StaticClass", "15StaticClass\15StaticClass.csproj", "{D9D15B9B-7629-49EC-B41B-49025E6EA7E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16This", "16This\16This.csproj", "{F708F321-3A35-40A7-8FF3-0F17B5465455}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17while", "17while\17while.csproj", "{C3D5EE25-B99E-4FBD-A1EF-F8EE86A216DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +106,26 @@ Global
 		{6A30F93C-5234-456F-A85C-E59451B24F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A30F93C-5234-456F-A85C-E59451B24F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A30F93C-5234-456F-A85C-E59451B24F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12155EB3-E423-4D66-A789-E19CB0AC9111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12155EB3-E423-4D66-A789-E19CB0AC9111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12155EB3-E423-4D66-A789-E19CB0AC9111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12155EB3-E423-4D66-A789-E19CB0AC9111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153F5F2F-7897-4CDD-B77D-BA358740C995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153F5F2F-7897-4CDD-B77D-BA358740C995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153F5F2F-7897-4CDD-B77D-BA358740C995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153F5F2F-7897-4CDD-B77D-BA358740C995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9D15B9B-7629-49EC-B41B-49025E6EA7E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D15B9B-7629-49EC-B41B-49025E6EA7E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D15B9B-7629-49EC-B41B-49025E6EA7E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D15B9B-7629-49EC-B41B-49025E6EA7E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F708F321-3A35-40A7-8FF3-0F17B5465455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F708F321-3A35-40A7-8FF3-0F17B5465455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F708F321-3A35-40A7-8FF3-0F17B5465455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F708F321-3A35-40A7-8FF3-0F17B5465455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D5EE25-B99E-4FBD-A1EF-F8EE86A216DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D5EE25-B99E-4FBD-A1EF-F8EE86A216DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D5EE25-B99E-4FBD-A1EF-F8EE86A216DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D5EE25-B99E-4FBD-A1EF-F8EE86A216DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
