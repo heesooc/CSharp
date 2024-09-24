@@ -60,9 +60,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{339F7EE6-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextRpg001", "TextRpg001\TextRpg001.csproj", "{7D007555-9549-4157-B53A-17930F2B215A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23Inheritance", "23Inheritance\23Inheritance.csproj", "{E0012386-B67C-406A-B0D5-7CF24123BF44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23Inheritance", "23Inheritance\23Inheritance.csproj", "{E0012386-B67C-406A-B0D5-7CF24123BF44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24ClassConstructor", "24ClassConstructor\24ClassConstructor.csproj", "{BF18F1F8-5055-41B1-B1C8-971459451971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "24ClassConstructor", "24ClassConstructor\24ClassConstructor.csproj", "{BF18F1F8-5055-41B1-B1C8-971459451971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25String01", "25String01\25String01.csproj", "{4D94E84C-4F20-434F-97DC-53002B794FA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -176,6 +178,10 @@ Global
 		{BF18F1F8-5055-41B1-B1C8-971459451971}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF18F1F8-5055-41B1-B1C8-971459451971}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF18F1F8-5055-41B1-B1C8-971459451971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D94E84C-4F20-434F-97DC-53002B794FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D94E84C-4F20-434F-97DC-53002B794FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D94E84C-4F20-434F-97DC-53002B794FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D94E84C-4F20-434F-97DC-53002B794FA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

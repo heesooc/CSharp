@@ -22,14 +22,18 @@ class FightUnit
     {
         Console.WriteLine(Name);
         Console.WriteLine("---------------------------");
-        Console.Write("공격력 : ");
-        Console.WriteLine(AT);
+        /*Console.Write("공격력 : ");
+        Console.WriteLine(AT);*/
+        //Console.WriteLine("공격력 : " +  AT.ToString("D4"));
+        Console.WriteLine("공격력 : " + AT);
 
         // 체력: 50/100
-        Console.Write("체력 : ");
+        /*Console.Write("체력 : ");
         Console.Write(HP);
         Console.Write("/");
-        Console.WriteLine(MAXHP);
+        Console.WriteLine(MAXHP);*/
+        //Console.WriteLine("체력 : " + HP.ToString() + "/" + MAXHP.ToString());
+        Console.WriteLine("체력 : " + HP + "/" + MAXHP);
         Console.WriteLine("---------------------------");
     }
 
