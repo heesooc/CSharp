@@ -11,7 +11,19 @@ class FightUnit
     protected string Name = "None";
     int AT = 10;
     protected int HP = 50;
-    public int MAXHP = 100;
+    protected int m_MAXHP = 100;
+    
+    public int MAXHP
+    {
+        get { return m_MAXHP; }
+        set { m_MAXHP = value; }
+    }
+
+    public string ProNAME
+    {
+        get { return Name; }
+        set { Name = value; }
+    }
 
     public void SetName(string _Name)
     {
@@ -228,6 +240,11 @@ namespace TextRpg001
             // 
             Player NewPlayer = new Player();
             //NewPlayer.SetName("플레이어");
+            NewPlayer.ProNAME = "마법사";
+            string PlayerName = NewPlayer.ProNAME;
+            NewPlayer.MAXHP = 200;
+            int PlayerMAXHP = NewPlayer.MAXHP;
+            
 
             /* while (true) 
              {
