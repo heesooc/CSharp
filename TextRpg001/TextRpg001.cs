@@ -32,6 +32,16 @@ class FightUnit
         Console.WriteLine(MAXHP);
         Console.WriteLine("---------------------------");
     }
+
+    public int GetHP()
+    {
+        return HP;
+    }
+
+    public void Damage(FightUnit _OtherUnit)
+    {
+        this.HP -= _OtherUnit.AT;
+    }
 }
 
 class Player : FightUnit
@@ -41,10 +51,6 @@ class Player : FightUnit
         HP = MAXHP;
     }
 
-    public int GetHP()
-    {
-        return HP;
-    }
 
     public Player()
     {
@@ -122,7 +128,7 @@ namespace TextRpg001
                     return STARTSELECT.NONESELECT;
             }
         }
-        static void Town(Player _Player)
+        static STARTSELECT Town(Player _Player)
         {
             while (true) 
             {
@@ -149,19 +155,23 @@ namespace TextRpg001
                     case ConsoleKey.D2:
                         break;
                     case ConsoleKey.D3:
-                        return;
+                        return STARTSELECT.NONESELECT;
                 }
             }
         }
 
-        static void Battle(Player _Player)
+        static STARTSELECT Battle(Player _Player)
         {
             // Console.WriteLine("아직 개장하지 않았습니다.");
             // Console.ReadKey();
 
             Monster NewMonster = new Monster("오크");
 
-            while (/*둘 중 누군가 죽을 때까지*/true)
+            // 객체지향
+            // 객체를 지향해서 사용한다.
+
+
+            while (_Player.GetHP() > 0 && NewMonster.GetHP() > 0)
             {
                 Console.Clear();
                 _Player.StatusRender();
@@ -169,15 +179,29 @@ namespace TextRpg001
                 // 실력 늘고 싶다.
                 // 1. 죽을 때까지 싸우게 만들어라.
                 // 1-1. 권장. 플레이어 한 대. 몬스터 한 대.
+                Console.ReadKey();
+                if (_Player.GetHP() > 0 && NewMonster.GetHP() > 0)
+                {
+                    _Player.Damage(NewMonster);
+                    NewMonster.Damage(_Player);
+                }
                 // 2. 한 쪽이 죽으면(나간다) 마을로 자동이송.
                 // 2-1. 그냥 나간다.
                 // 2-2. 마을로 나간다. 
+
                 // 가장 기본적인 것이 되면
                 // 그 다음부터 하세요. 
                 // 가장 단순한 부분부터 만들어가라.
                 // 싸우게 만들어보세요. 
-                Console.ReadKey();
+                //Console.ReadKey();
             }
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("마을로 이동합니다.");
+            Console.ReadKey();
+            //return;
+            return STARTSELECT.SELECTTOWN;
+            //Town(_Player);
         }
 
         static int TenReturn()
@@ -210,21 +234,29 @@ namespace TextRpg001
                  ConsoleKeyInfo KeyInfo = Console.ReadKey();
                  // 반환. 리턴값
                  Console.WriteLine(KeyInfo.Key);
-             }*/ 
+             }*/
+
+            STARTSELECT SelectCheck = STARTSELECT.NONESELECT;
 
             while (true)
             {
                 // 함수 자체의 용도를 생각해라
                 // 정말 한 가지의 용도로만 사용할 수 있나?
-                STARTSELECT SelectCheck = StartSelect();
+                /*if (SelectCheck == STARTSELECT.NONESELECT)
+                {
+                    SelectCheck = StartSelect();
+                }*/
 
                 switch (SelectCheck)
                 {
+                    case STARTSELECT.NONESELECT:
+                        SelectCheck = StartSelect();
+                        break;
                     case STARTSELECT.SELECTTOWN:
-                        Town(NewPlayer);
+                        SelectCheck = Town(NewPlayer);
                         break;
                     case STARTSELECT.SELECTBATTLE:
-                        Battle(NewPlayer);
+                        SelectCheck = Battle(NewPlayer);
                         break;
                 }
             }
