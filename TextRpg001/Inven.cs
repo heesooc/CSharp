@@ -94,11 +94,6 @@ class Inven
     // 셀렉트 인덱스가 화면 바깥으로 넘어갔는가?
     public bool OverCheck(int _SelectIndex)
     {
-        if (_SelectIndex >= ArrItem.Length || _SelectIndex <= -1)
-        {
-            return true;
-        }
-
         return false;
     }
 
@@ -203,7 +198,6 @@ class Inven
         }
     }
 
-    // 키 입력은 외부에서 받게 하자. 예) 플레이어 - 상점
     /*public void RenderToSelect()
     {
         Console.Clear();

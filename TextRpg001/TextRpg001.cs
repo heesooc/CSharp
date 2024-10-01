@@ -62,6 +62,15 @@ class FightUnit
 
 class Player : FightUnit
 {
+    private Inven PlayerInven = new Inven(5, 3);
+    public Inven PInven
+    {
+        get
+        {
+            return PlayerInven;
+        }
+    }
+
     public void Heal()
     {
         HP = MAXHP;
@@ -144,6 +153,28 @@ namespace TextRpg001
                     return STARTSELECT.NONESELECT;
             }
         }
+
+        static void Shop(Player _Player)
+        {
+            Inven ShopInven = new Inven(5, 3);
+
+            ShopInven.ItemIn(new Item("철검", 500));
+            ShopInven.ItemIn(new Item("갑옷", 200));
+            ShopInven.ItemIn(new Item("용이 내가 된다", 300));
+            ShopInven.ItemIn(new Item("포션", 400));
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("상점주인의 물건");
+                ShopInven.Render();
+                Console.WriteLine("---------------------------------");
+                Console.WriteLine("플레이어의 물건");
+                _Player.PInven.Render();
+                Console.ReadKey();
+            }
+        }
+
         static STARTSELECT Town(Player _Player)
         {
             while (true) 
@@ -152,7 +183,7 @@ namespace TextRpg001
                 _Player.StatusRender();
                 Console.WriteLine("마을에서 무슨 일을 하시겠습니까?");
                 Console.WriteLine("1. 체력을 회복한다.");
-                Console.WriteLine("2. 무기를 강화한다.");
+                Console.WriteLine("2. 상점에 들릅니다.");
                 Console.WriteLine("3. 마을을 나간다.");
 
                 // 초반에 프로그래밍의 전부.
@@ -169,6 +200,7 @@ namespace TextRpg001
                         _Player.Heal();
                         break;
                     case ConsoleKey.D2:
+                        Shop(_Player);
                         break;
                     case ConsoleKey.D3:
                         return STARTSELECT.NONESELECT;
